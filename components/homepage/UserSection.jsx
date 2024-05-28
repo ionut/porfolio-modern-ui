@@ -38,9 +38,11 @@ const UserSection = () => {
                     </div>
                 </PhoneMockup>
                 <div className="flex flex-col gap-2">
-                    <h2 className='prose-2xl'>Hello, user</h2>
-                    <h1 className="section-header">Full-stack<br /> Web Developer</h1>
-                    <h3 className='prose-xl mb-6'>I break down complex user experience problems to create integritiy focussed solutions that connect billions of people</h3>
+                    <div>
+                        <h2 className='prose-2xl'>Hello, user</h2>
+                        <h1 className="section-header">Full-stack<br /> Web Developer</h1>
+                        <h3 className='prose-xl'>I break down complex user experience problems to create integritiy focussed solutions that connect billions of people</h3>
+                    </div>
                     <div className="flex gap-6 items-center">
                         <Button model={"flex items-center gap-2 "}><span>Contact Me</span> <LuMail className=' text-lg' /></Button>
                         <Link href="" className="social-icons">
@@ -56,9 +58,7 @@ const UserSection = () => {
                             <LuInstagram className=' text-lg' />
                         </Link>
                     </div>
-                </div>
-                <div className="col-span-2">
-                    <div className="flex flex-wrap items-center justify-center gap-20">
+                    <div className="flex flex-wrap items-center gap-20">
                         <CountAnimation initialValue={0} targetValue={5} text={"Years of Experience"} />
                         <CountAnimation initialValue={0} targetValue={30} text={"Projects Completed"} />
                         <CountAnimation initialValue={0} targetValue={30} text={"Happy Clients"} />

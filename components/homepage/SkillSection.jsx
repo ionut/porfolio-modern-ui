@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { AnimatedTooltip } from "../ui/AnimatedTooltip";
-import { skills } from "@/data";
+import { skills } from "@/data/placeholderData";
 
 const SkillSection = () => {
     return (

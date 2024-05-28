@@ -2,7 +2,7 @@
 import React from 'react'
 import { Pin3d } from '../ui/Pin3d'
 import Image from 'next/image'
-import { portfolioItems } from '@/data'
+import { portfolioItems } from '@/data/placeholderData'
 
 const PortfolioSection = () => {
 
