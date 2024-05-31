@@ -1,15 +1,14 @@
 {
   "kind": "collectionType",
-  "collectionName": "blogs",
+  "collectionName": "projects",
   "info": {
-    "singularName": "blog",
-    "pluralName": "blogs",
-    "displayName": "Blogs",
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Projects",
     "description": ""
   },
   "options": {
-    "draftAndPublish": true,
-    "populateCreatorFields": true
+    "draftAndPublish": true
   },
   "pluginOptions": {
     "i18n": {
@@ -26,46 +25,52 @@
       "type": "string",
       "required": true
     },
-    "poze": {
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text",
+      "required": true
+    },
+    "technologies": {
       "type": "media",
       "multiple": true,
       "required": true,
-      "allowedTypes": ["images", "files", "videos", "audios"],
+      "allowedTypes": [
+        "images"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "text": {
+    "url": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "richtext",
+      "type": "string",
       "required": true
     },
-    "category": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "type": "customField",
-      "customField": "plugin::tagsinput.tags"
-    },
-    "blog": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::blog.blog",
-      "inversedBy": "blogs"
-    },
-    "blogs": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::blog.blog",
-      "mappedBy": "blog"
+      }
     }
   }
 }
