@@ -19,13 +19,20 @@
     @apply text-6xl font-bold dark:bg-textGradient bg-linearGradient bg-textGradientDark mb-3;
   }
   .link-animation {
-    @apply relative before:absolute before:bottom-[9px] before:left-0 before:h-[2px] before:bg-textGradient before:dark:bg-textGradientDark before:w-full before:rounded-[4px] hover:bg-transparent before:duration-300 before:ease-in-out before:scale-0 before:hover:scale-100 before:origin-left;
+    @apply relative before:absolute before:-bottom-[7px] before:left-0 before:h-[2px] before:bg-textGradient before:dark:bg-textGradientDark before:w-full before:rounded-[4px] hover:bg-transparent before:duration-300 before:ease-in-out before:scale-0 before:hover:scale-100 before:origin-left;
+  }
+  .link-animation-active {
+    @apply relative before:absolute before:-bottom-[7px] before:left-0 before:h-[2px] before:bg-textGradient before:dark:bg-textGradientDark before:w-full before:rounded-[4px] hover:bg-transparent before:duration-300 before:ease-in-out before:scale-100 before:origin-left;
   }
 }
 
 .bg-linearGradient {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+}
+
+.row-3 {
+  grid-row: span 3;
 }
 
 circle {

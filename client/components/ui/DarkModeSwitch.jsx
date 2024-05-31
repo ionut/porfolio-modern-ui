@@ -38,12 +38,8 @@ export const DarkModeSwitch = () => {
 
             {/* this hidden checkbox controls the state */}
             <input type="checkbox" className="theme-controller" value="synthwave" />
-
             <Moon />
             <Sun />
-
-
-
         </label>
     )
 }

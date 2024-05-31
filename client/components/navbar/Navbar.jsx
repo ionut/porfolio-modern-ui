@@ -4,6 +4,7 @@ import { DarkModeSwitch } from '../ui/DarkModeSwitch'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useMotionValueEvent, useScroll } from 'framer-motion'
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
     const { scrollY } = useScroll()
@@ -12,7 +13,7 @@ const Navbar = () => {
     useMotionValueEvent(scrollY, "change", (latest) => {
         setBlurOnScroll(latest)
     })
-
+    const pathname = usePathname();
     return (
         <div className={`navbar sticky top-0 border-b-[1px] border-primary z-50 ${blurOnScroll !== 0 ? 'backdrop-blur-[2px] bg-white/10' : ''}`}>
             <div className="navbar-start">
@@ -31,12 +32,12 @@ const Navbar = () => {
                 <Link href="/" className="btn btn-ghost text-xl"><Image src="/logo.svg" width={50} height={50} alt="ALT" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="flex gap-6 p-4 relative menu-horizontal px-1">
                     <li><Link href="" className="lg:prose-xl link-animation">Services</Link></li>
                     <li><Link href="" className="lg:prose-xl link-animation">Portfolio</Link></li>
                     <li><Link href="" className="lg:prose-xl link-animation">Skills</Link></li>
                     <li><Link href="" className="lg:prose-xl link-animation">Testimonials</Link></li>
-                    <li><Link href="" className="lg:prose-xl link-animation">Blog</Link></li>
+                    <li><Link href="/blogs" className={`lg:prose-xl link-animation ${pathname === '/blogs' ? 'link-animation-active' : ''}`}>Blogs</Link></li>
                     <li><Link href="" className="lg:prose-xl link-animation">Contact</Link></li>
                 </ul>
             </div>
