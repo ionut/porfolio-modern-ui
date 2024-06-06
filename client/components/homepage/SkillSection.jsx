@@ -6,7 +6,7 @@ import { skills } from "@/data/placeholderData";
 const SkillSection = () => {
     return (
 
-        <div className="flex flex-row items-center justify-center mb-10 w-full flex-wrap">
+        <div className="flex flex-1 items-center justify-center mb-10 w-full flex-wrap">
             <AnimatedTooltip items={skills} />
         </div>
     )

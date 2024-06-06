@@ -16,7 +16,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${zillaSlab.className} h-100vh`}>
+      <body
+        className={`${zillaSlab.className} dark:bg-grid-small-primary/[0.2] bg-grid-small-black/[0.2]`}
+      >
         <Navbar />
         <main>{children}</main>
         <Footer />

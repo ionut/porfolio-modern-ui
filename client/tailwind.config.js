@@ -21,6 +21,7 @@ module.exports = {
         black: "#2c2d37",
         primary: "#F0EFEF",
         secondary: "#003333",
+        codeMD: "#808080",
         // backdrop-filter: blur(20px);
       },
       backgroundImage: {
@@ -30,6 +31,9 @@ module.exports = {
           "linear-gradient(80deg, #2ababa 0%, rgba(255,255,255,1) 100%)",
         textGradientDark:
           "linear-gradient(80deg,#2ababa 0%, rgba(13,112,112,1) 100%)",
+      },
+      boxShadow: {
+        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
       },
     },
   },
@@ -80,6 +84,18 @@ module.exports = {
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
     },
+    [addVariablesForColors],
   ],
   darkMode: "class",
 };
+
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}

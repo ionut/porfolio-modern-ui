@@ -16,7 +16,7 @@
     @apply border-secondary border-[1px] rounded-[50%] size-8 flex items-center justify-center dark:border-primary relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-secondary before:scale-0 before:transition-all before:rounded-[50%]  before:-z-10 hover:before:scale-110 hover:text-primary dark:before:bg-primary dark:hover:text-secondary;
   }
   .section-header {
-    @apply text-6xl font-bold dark:bg-textGradient bg-linearGradient bg-textGradientDark mb-3;
+    @apply text-4xl xl:text-6xl font-bold dark:bg-textGradient bg-linearGradient bg-textGradientDark mb-3;
   }
   .link-animation {
     @apply relative before:absolute before:-bottom-[7px] before:left-0 before:h-[2px] before:bg-textGradient before:dark:bg-textGradientDark before:w-full before:rounded-[4px] hover:bg-transparent before:duration-300 before:ease-in-out before:scale-0 before:hover:scale-100 before:origin-left;
@@ -39,4 +39,10 @@ circle {
   stroke-dashoffset: 0;
   stroke-width: 15%;
   fill: none;
+}
+
+pre {
+  background-color: #a9a9a9;
+  border-radius: 1px;
+  margin-block: 10px;
 }

@@ -29,8 +29,8 @@ const CountAnimation = ({
 
     return (
         <div className="flex gap-2 items-center">
-            <h3 className="text-6xl font-bold">{count}+</h3>
-            <h5 className="text-md max-w-16">{text}</h5>
+            <h3 className="text-lg xl:text-6xl font-bold">{count}+</h3>
+            <h5 className="text-md xl:text-md max-w-16">{text}</h5>
         </div>
     );
 };

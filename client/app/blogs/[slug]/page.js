@@ -2,16 +2,27 @@ import React from "react";
 import Image from "next/image";
 import { fetchData } from "@/data/fetchData";
 import { format } from "date-fns";
-import BlogCard from "@/components/ui/BlogCard";
+import RelatedBlog from "@/components/ui/blogs/RelatedBlog";
+import { CustomMDX } from "../../../libs/mdx-remote";
 
 const page = async ({ params }) => {
-  const blog = await fetchData(`/api/blogs/${params.id}?populate=*`);
-  const { title, text, createdAt, poze, createdBy, category } =
-    blog.data.attributes;
+  const blog = await fetchData(
+    `/api/blogs?filters[slug][$eq]=${params.slug}&populate=*`
+  );
 
+  const {
+    title,
+    text,
+    createdAt,
+    poze,
+    createdBy,
+    category,
+    blog: relatedBlog,
+  } = blog.data[0].attributes;
   const { url: pictureUrl, name: pictureName } = poze.data[0].attributes;
   const formatedUpdatedDate = format(new Date(createdAt), "MM/dd/yyyy");
   const { firstname, lastname } = createdBy.data.attributes;
+
   return (
     <section>
       <div className="container py-20">
@@ -32,7 +43,9 @@ const page = async ({ params }) => {
               height={600}
               className="w-full"
             />
-            <div className="text-xl">{text}</div>
+            <div>
+              <CustomMDX source={text} />
+            </div>
             <div className="flex items-center justify-between">
               <div className="flex gap-2 items-center">
                 <Image src="/tag.svg" alt="tag icon" width={50} height={50} />
@@ -49,16 +62,11 @@ const page = async ({ params }) => {
             </div>
           </div>
           <div className="md:col-span-1 flex flex-col">
-            <h3 className="prose-2xl text-center">Related Blogs</h3>
-            {/* {relatedBlogs.data.map((relatedBlog) => {
-              return (
-                <BlogCard
-                  key={relatedBlog.id}
-                  id={relatedBlog.id}
-                  blog={relatedBlog}
-                />
-              );
-            })} */}
+            <div>
+              <h3 className="prose-2xl text-center">Related Blogs</h3>
+
+              <RelatedBlog relatedBlog={relatedBlog} />
+            </div>
           </div>
         </div>
       </div>

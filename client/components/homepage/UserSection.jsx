@@ -2,17 +2,16 @@
 import Image from 'next/image'
 import React from 'react'
 import PhoneMockup from '../ui/PhoneMockup'
-import Link from 'next/link'
 import { Sun } from '../ui/DarkModeSwitch'
-import { LuGithub, LuInstagram, LuLinkedin, LuTwitter, LuMail } from "react-icons/lu";
 import Button from '../ui/Button'
 import CountAnimation from '../ui/CountAnimation'
+import { LuMail } from "react-icons/lu";
 import SkillSection from './SkillSection'
+import SocialIcons from '../ui/SocialIcons'
 
 const UserSection = () => {
     return (
-        <section className="h-[calc(100dvh_-_65px)] dark:bg-grid-small-primary/[0.2] bg-grid-small-black/[0.2] before:before-gradient before:top-0 before:right-0 md:h-[calc(100dvh_-_85px)]">
-            <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-primary [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+        <section className="h-[calc(100dvh_-_65px)] md:h-[calc(100dvh_-_85px)]">
             <div className="container grid grid-cols-1 grid-flow-row md:grid-cols-2 items-center h-full mb-5">
                 <PhoneMockup>
                     <div className="navbar sticky top-0 backdrop-blur-[2px] bg-primary/10 border-b-[1px] border-primary z-10 pt-6">
@@ -22,7 +21,6 @@ const UserSection = () => {
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                                 </div>
                             </div>
-                            <Image src="/next.svg" width={100} height={100} alt="ALT" />
                         </div>
                         <div className="navbar-end">
                             <Sun />
@@ -31,10 +29,10 @@ const UserSection = () => {
                     <div className="p-4">
                         <div className="avatar">
                             <div className="rounded">
-                                <Image src="/peacock640.jpg" alt="me" width={400} height={475} className="" />
+                                <Image src="/webdev.svg" alt="me" width={400} height={475} className="" />
                             </div>
                         </div>
-                        <h4 className="prose md:prose-md">responsivness</h4>
+                        <h4 className="prose md:prose-md">Web development encompasses a wide range of services, which include delivering websites or web apps, eCommerce solutions, website architectures, QA testing, maintenance, consulting, and even a custom CMS.</h4>
                     </div>
                 </PhoneMockup>
                 <div className="flex flex-col gap-2">
@@ -43,22 +41,11 @@ const UserSection = () => {
                         <h1 className="section-header">Full-stack<br /> Web Developer</h1>
                         <h3 className='prose-xl'>I break down complex user experience problems to create integritiy focussed solutions that connect billions of people</h3>
                     </div>
-                    <div className="flex gap-6 items-center">
-                        <Button model={"flex items-center gap-2 "}><span>Contact Me</span> <LuMail className=' text-lg' /></Button>
-                        <Link href="" className="social-icons">
-                            <LuTwitter className=' text-lg' />
-                        </Link>
-                        <Link href="" className="social-icons">
-                            <LuLinkedin className=' text-lg' />
-                        </Link>
-                        <Link href="" className="social-icons">
-                            <LuGithub className=' text-lg' />
-                        </Link>
-                        <Link href="" className="social-icons">
-                            <LuInstagram className=' text-lg' />
-                        </Link>
+                    <div className="flex gap-2 md:gap-6 items-center">
+                        <Button extraStyle={"flex items-center gap-2"}><span>Contact Me</span> <LuMail className='text-lg' /></Button>
+                        <SocialIcons />
                     </div>
-                    <div className="flex flex-wrap items-center gap-20">
+                    <div className="grid grid-cols-3 items-center gap-2 md:gap-20">
                         <CountAnimation initialValue={0} targetValue={5} text={"Years of Experience"} />
                         <CountAnimation initialValue={0} targetValue={30} text={"Projects Completed"} />
                         <CountAnimation initialValue={0} targetValue={30} text={"Happy Clients"} />
