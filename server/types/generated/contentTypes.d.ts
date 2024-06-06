@@ -408,8 +408,14 @@ export interface ApiBlogBlog extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    blog: Attribute.Relation<'api::blog.blog', 'manyToOne', 'api::blog.blog'>;
-    blogs: Attribute.Relation<'api::blog.blog', 'oneToMany', 'api::blog.blog'>;
+    blog: Attribute.Relation<'api::blog.blog', 'oneToOne', 'api::blog.blog'>;
+    slug: Attribute.UID<'api::blog.blog', 'title'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
