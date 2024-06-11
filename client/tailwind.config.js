@@ -85,6 +85,7 @@ module.exports = {
       );
     },
     [addVariablesForColors],
+    require("tailwind-gradient-mask-image"),
   ],
   darkMode: "class",
 };

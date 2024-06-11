@@ -15,7 +15,7 @@ const BlogSection = async () => {
 
                 <div className="space-y-5">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                        {data.map((blog, index) => {
+                        {data?.map((blog, index) => {
                             if (index < 3) {
                                 return (<BlogCard key={blog.id} id={blog.id} blog={blog} />)
                             }

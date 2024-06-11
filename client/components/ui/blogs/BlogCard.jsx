@@ -18,7 +18,7 @@ const BlogCard = ({ blog }) => {
         <>
             <Link href={`/blogs/${slug}`} className="grid grid-rows-subgrid row-3 bg-[rgba(34,136,136,.1)] dark:bg-[rgba(17,61,61,.2)] text-black dark:text-white border-neutral-200 dark:border-slate-800">
                 <figure>
-                    <Image src={`${process.env.BASE_URL_STRAPI}${pictureUrl}`} alt="Movie" width={500} height={500} />
+                    <Image src={`${process.env.BASE_URL_STRAPI}${pictureUrl}`} alt="Movie" width={500} height={500} className="card-mask-image h-full" />
                 </figure>
 
                 <h2 className="prose-2xl font-bold px-4">{title}</h2>

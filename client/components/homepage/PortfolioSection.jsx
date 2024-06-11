@@ -13,7 +13,7 @@ const PortfolioSection = async () => {
                 <h1 className="section-header text-center">Collection of recent projects</h1>
                 <h4 className="prose-xl text-center mb-6">We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                    {portfolio?.data.map((item) => {
+                    {portfolio?.data?.map((item) => {
                         const { title, description, technologies, url } = item.attributes;
                         const { url: imageUrl } = item.attributes.image.data.attributes
 
