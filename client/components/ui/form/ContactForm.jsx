@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Label } from "./label";
+import { Label } from "./Label";
 import { FormInput } from "./FormInput";
 import { cn } from "@/libs/utils";
 import { Textarea } from "./Textarea";
