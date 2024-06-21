@@ -11,7 +11,7 @@ const BlogSection = async () => {
         <section className="relative py-10">
             <div className="container">
                 <h1 className="section-header text-center">My recent articles</h1>
-                <h4 className="prose-xl text-center mb-2">We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</h4>
+                <h4 className="prose-xl text-center mb-2">Notes, opinions and project ideas.</h4>
 
                 <div className="space-y-5">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

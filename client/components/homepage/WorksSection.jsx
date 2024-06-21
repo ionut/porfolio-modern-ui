@@ -10,7 +10,7 @@ export const WorksSection = async () => {
         <section className="relative py-10">
             <div className="container">
                 <h1 className="section-header text-center">My work experience</h1>
-                <h4 className="prose-xl text-center mb-2">We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</h4>
+                <h4 className="prose-xl text-center mb-2">I worked in several positions, evolving every day and being aware of new technologies.</h4>
 
                 <div className="grid grid-cols-2 gap-5 mb-6">
                     {workExperience.map((card) => (
