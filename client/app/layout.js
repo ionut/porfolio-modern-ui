@@ -2,6 +2,7 @@ import { Zilla_Slab } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import UserProvider from "./userProvider";
 
 const zillaSlab = Zilla_Slab({
   subsets: ["latin"],
@@ -20,7 +21,9 @@ export default function RootLayout({ children }) {
         className={`${zillaSlab.className} dark:bg-grid-small-primary/[0.2] bg-grid-small-black/[0.2]`}
       >
         <Navbar />
-        <main>{children}</main>
+        <main>
+          <UserProvider>{children}</UserProvider>
+        </main>
         <Footer />
       </body>
     </html>

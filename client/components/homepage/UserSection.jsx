@@ -8,35 +8,18 @@ import SocialIcons from '../ui/SocialIcons'
 import Skills from '../ui/Skills'
 import { createPortal } from 'react-dom'
 import WelcomeModal from '../ui/WelcomeModal'
+import { useSelector } from 'react-redux'
 
 
 const UserSection = () => {
     const [isMounted, setIsMounted] = useState(false);
-    const [userName, setUserName] = useState("");
-    const [isOpen, setIsOpen] = useState(true);
-    const [error, setError] = useState(false);
+    const user = useSelector(state => state.user.username);
 
     useEffect(() => {
         setIsMounted(true)
-        setUserName(localStorage.getItem("name"))
     }, []);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const formData = new FormData(e.target);
-        const inputValue = formData.get('name');
-        if (inputValue === "") {
-            setError(true)
-        } else {
-            setIsOpen(false);
-            setUserName(localStorage.setItem("name", inputValue));
-            window.location.reload()
-        }
-    }
 
-    const props = {
-        ...(isOpen && { open: true })
-    }
 
     return (
         <>
@@ -67,7 +50,7 @@ const UserSection = () => {
                     </PhoneMockup>
                     <div className="flex flex-col gap-6">
                         <div>
-                            <h2 className='prose-2xl'>Hello, <span className="capitalize">{userName}</span></h2>
+                            <h2 className='prose-2xl'>Hello, <span className="capitalize">{user}</span></h2>
                             <h1 className="section-header">Experienced<br /> Web Developer</h1>
                             <h3 className='prose-xl'>I break down complex user experience problems to create integritiy focussed solutions that connect billions of people</h3>
                         </div>
@@ -87,7 +70,7 @@ const UserSection = () => {
 
                 </div>
             </section>
-            {isMounted ? createPortal(<WelcomeModal userName={userName} error={error} handleSubmit={handleSubmit} props={props} />, document.body) : null}
+            {isMounted && user === "" ? createPortal(<WelcomeModal />, document.body) : null}
 
         </>
     )

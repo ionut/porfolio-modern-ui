@@ -12,7 +12,7 @@ export const WorksSection = async () => {
                 <h1 className="section-header text-center">My work experience</h1>
                 <h4 className="prose-xl text-center mb-2">I worked in several positions, evolving every day and being aware of new technologies.</h4>
 
-                <div className="grid grid-cols-2 gap-5 mb-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
                     {workExperience.map((card) => (
                         <MovingButton
                             key={card.id}
