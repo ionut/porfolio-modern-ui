@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import UserProvider from "./userProvider";
+import { Analytics } from "@vercel/analytics/react";
 
 const zillaSlab = Zilla_Slab({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
           <UserProvider>{children}</UserProvider>
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
