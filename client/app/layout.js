@@ -13,7 +13,14 @@ export const metadata = {
   title: "Husoschi Ionut-Catalin",
   description: "Portfolio Husoschi Ionut-Catalin",
 };
-
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  // Also supported by less commonly used
+  // interactiveWidget: 'resizes-visual',
+};
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

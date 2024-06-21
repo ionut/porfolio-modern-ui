@@ -31,7 +31,7 @@ const WelcomeModal = () => {
                 <p className="text-primary py-4">Please start by telling me your name!</p>
                 <div className="space-y-4">
                     <form onSubmit={handleSubmit} method="dialog" className="grid gap-2">
-                        <FormInput type="text" name="name" placeholder="Your name" className="h-14" value={userName} onChange={(e) => setUserName(e.target.value)} />
+                        <FormInput type="text" name="name" placeholder="Your name" className="h-10" value={userName} onChange={(e) => setUserName(e.target.value)} />
                         {/* if there is a button in form, it will close the modal */}
                         <button className=" animate-shimmer  border-[1px] rounded-[50px] px-6 prose md:prose-md lg:prose-lg text-primary border-primary hover:bg-secondary hover:text-primary   disabled:cursor-not-allowed disabled:opacity-50"
                             type="submit"
