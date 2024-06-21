@@ -6,7 +6,7 @@ const ContactSection = () => {
     return (
         <section className="container py-10">
             <h1 className="section-header text-center">Let's get in touch</h1>
-            <h4 className="prose-xl text-center mb-2">I code beautifully simple things and i love what I do.</h4>
+            <h4 className="prose-xl text-center mb-2">I code beautifully simple things and I love what I do.</h4>
             <div className="grid md:grid-cols-2 gap-5 items-center">
                 <ContactForm />
                 <div className="flex flex-col gap-6">

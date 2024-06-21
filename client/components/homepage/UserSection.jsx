@@ -50,9 +50,9 @@ const UserSection = () => {
                     </PhoneMockup>
                     <div className="flex flex-col gap-6">
                         <div>
-                            <h2 className='prose-2xl'>Hello, <span className="capitalize">{user}</span></h2>
+                            <h2 className='prose-2xl'>Hello, <span className="capitalize">{user} </span> I am here to help you</h2>
                             <h1 className="section-header">Experienced<br /> Web Developer</h1>
-                            <h3 className='prose-xl'>I break down complex user experience problems to create integritiy focussed solutions that connect billions of people</h3>
+                            <h3 className='prose-xl'>If you need your business to prosper, one of the most important things is to be online. Whether we are talking about a simple landing page, blog or online store. </h3>
                         </div>
                         <div className="flex gap-2 md:gap-6 items-center">
                             <SocialIcons />
