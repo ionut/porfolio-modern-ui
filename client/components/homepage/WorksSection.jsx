@@ -5,7 +5,7 @@ import { workExperience } from '@/data/placeholderData'
 import Image from 'next/image'
 import GitHubActivityTable from '../ui/GitHubActivityTable'
 
-export const WorksSection = async () => {
+const WorksSection = async () => {
     return (
         <section className="relative py-10">
             <div className="container">
@@ -53,3 +53,4 @@ export const WorksSection = async () => {
     )
 }
 
+export default WorksSection

@@ -19,11 +19,8 @@ const UserSection = () => {
         setIsMounted(true)
     }, []);
 
-
-
     return (
         <>
-
             <section className="h-[calc(100dvh_-_65px)] md:h-[calc(100dvh_-_85px)]">
                 <div className="container grid grid-cols-1 grid-flow-row md:grid-cols-2 items-center h-full mb-5">
                     <PhoneMockup>

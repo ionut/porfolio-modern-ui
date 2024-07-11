@@ -54,6 +54,11 @@ export const skills = [
     title: "REST API",
     icon: "/api.svg",
   },
+  {
+    id: 12,
+    title: "Typescript",
+    icon: "/typescript.svg",
+  },
 ];
 
 export const workExperience = [
