@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import UserSection from "@/components/homepage/UserSection";
 import WorksSection from "@/components/homepage/WorksSection";
 import PortfolioSection from "@/components/homepage/PortfolioSection";
