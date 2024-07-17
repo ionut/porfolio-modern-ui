@@ -45,9 +45,8 @@ const WorksSection = async () => {
                         </MovingButton>
                     ))}
                 </div>
-                <Suspense fallback={<p>Loading feed...</p>}>
-                    <GitHubActivityTable />
-                </Suspense>
+
+                <GitHubActivityTable />
             </div>
         </section>
     )

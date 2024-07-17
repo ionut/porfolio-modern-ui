@@ -11,9 +11,7 @@ export default function Home() {
       <UserSection />
       <PortfolioSection />
       <WorksSection />
-      <Suspense fallback={<p>Loading feed...</p>}>
-        <BlogSection />
-      </Suspense>
+      <BlogSection />
       <ContactSection />
     </>
   );

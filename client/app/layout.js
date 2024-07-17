@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         className={`${zillaSlab.className} dark:bg-grid-small-primary/[0.2] bg-grid-small-black/[0.2]`}
       >
         <Navbar />
-        <main>
+        <main className="min-h-screen">
           <UserProvider>{children}</UserProvider>
         </main>
         <Footer />
