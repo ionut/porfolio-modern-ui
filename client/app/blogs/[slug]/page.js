@@ -5,7 +5,7 @@ import { format } from "date-fns";
 import RelatedBlog from "@/components/ui/blogs/RelatedBlog";
 import { CustomMDX } from "../../../libs/mdx-remote";
 
-const page = async ({ params }) => {
+const BlogPage = async ({ params }) => {
   const blog = await fetchData(
     `/api/blogs?filters[slug][$eq]=${params.slug}&populate=*`
   );
@@ -74,4 +74,4 @@ const page = async ({ params }) => {
   );
 };
 
-export default page;
+export default BlogPage;

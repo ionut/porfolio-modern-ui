@@ -4,12 +4,11 @@ import { Label } from "./Label";
 import { FormInput } from "./FormInput";
 import { cn } from "@/libs/utils";
 import { Textarea } from "./Textarea";
-import { useSelector } from "react-redux";
 
 export function ContactForm() {
     const [status, setStatus] = useState("idle");
     const [responseMsg, setResponseMsg] = useState("");
-    const user = useSelector(state => state.user.username);
+
     async function handleSubmit(e) {
         e.preventDefault();
         setStatus("loading");
@@ -67,7 +66,7 @@ export function ContactForm() {
     return (
         <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
             <h2 className="font-bold text-2xl text-neutral-800 dark:text-neutral-200">
-                Welcome, <span className="capitalize">{user}</span>
+                Welcome, stranger
             </h2>
             <p className="text-neutral-600 text-md max-w-sm mt-2 dark:text-neutral-300">
                 Contact us

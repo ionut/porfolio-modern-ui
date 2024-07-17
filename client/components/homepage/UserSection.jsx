@@ -1,23 +1,14 @@
-"use client"
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import PhoneMockup from '../ui/PhoneMockup'
 import { Sun } from '../ui/DarkModeSwitch'
 import CountAnimation from '../ui/CountAnimation'
 import SocialIcons from '../ui/SocialIcons'
 import Skills from '../ui/Skills'
-import { createPortal } from 'react-dom'
-import WelcomeModal from '../ui/WelcomeModal'
-import { useSelector } from 'react-redux'
+
 
 
 const UserSection = () => {
-    const [isMounted, setIsMounted] = useState(false);
-    const user = useSelector(state => state.user.username);
-
-    useEffect(() => {
-        setIsMounted(true)
-    }, []);
 
     return (
         <>
@@ -47,7 +38,7 @@ const UserSection = () => {
                     </PhoneMockup>
                     <div className="flex flex-col gap-6">
                         <div>
-                            <h2 className='prose-2xl'>Hello, <span className="capitalize">{user} </span> I am here to help you</h2>
+                            <h2 className='prose-2xl'>Hello, stranger I am here to help you</h2>
                             <h1 className="section-header">Experienced<br /> Web Developer</h1>
                             <h3 className='prose-xl'>If you need your business to prosper, one of the most important things is to be online. Whether we are talking about a simple landing page, blog or online store. </h3>
                         </div>
@@ -67,8 +58,6 @@ const UserSection = () => {
 
                 </div>
             </section>
-            {isMounted && user === "" ? createPortal(<WelcomeModal />, document.body) : null}
-
         </>
     )
 }

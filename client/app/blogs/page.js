@@ -1,7 +1,7 @@
 import BlogList from "@/components/ui/blogs/BlogList";
 import React, { Suspense } from "react";
 
-const page = () => {
+const BlogsPage = () => {
   return (
     <section>
       <div className="container py-20">
@@ -14,4 +14,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default BlogsPage;
