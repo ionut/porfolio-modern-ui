@@ -6,8 +6,6 @@ import CountAnimation from '../ui/CountAnimation'
 import SocialIcons from '../ui/SocialIcons'
 import Skills from '../ui/Skills'
 
-
-
 const UserSection = () => {
 
     return (

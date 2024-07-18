@@ -10,7 +10,8 @@ export const fetchData = async (endpoint) => {
         Authorization: `Bearer  ${process.env.TOKEN_STRAPI}`,
       },
     });
-    const data = res.json();
+    const data = await res.json();
+
     return data;
   } catch (error) {
     console.error(error);
