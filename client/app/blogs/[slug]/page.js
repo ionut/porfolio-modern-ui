@@ -5,6 +5,14 @@ import { format } from "date-fns";
 import RelatedBlog from "@/components/ui/blogs/RelatedBlog";
 import { CustomMDX } from "../../../libs/mdx-remote";
 
+export async function generateStaticParams() {
+  const posts = await fetchData("/api/blogs");
+
+  return posts.data.map((post) => ({
+    slug: post.attributes.slug,
+  }));
+}
+
 const BlogPage = async ({ params }) => {
   const blog = await fetchData(
     `/api/blogs?filters[slug][$eq]=${params.slug}&populate=*`
