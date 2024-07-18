@@ -1,45 +1,41 @@
 "use client"
 import React, { useState } from 'react'
+import Button from '../ui/Button';
 
 const DetailsSection = () => {
-    const [downloadStatus, setDownloadStatus] = useState("");
-    const downloadResume = async () => {
-        try {
-            const response = await fetch("/api", {
-                responseType: "blob" // Important for binary data
+    const [status, setStatus] = useState(false)
+    // Function will execute on click of button
+    const onButtonClick = () => {
+        setStatus(false)
+        // using Java Script method to get PDF file
+        fetch("/husoschi_ionut_resume.pdf").then((response) => {
+            response.blob().then((blob) => {
+                // Creating new object of PDF file
+                const fileURL =
+                    window.URL.createObjectURL(blob);
+
+                // Setting various property values
+                let alink = document.createElement("a");
+                alink.href = fileURL;
+                alink.download = "/husoschi_ionut_resume.pdf";
+                alink.click();
+                setStatus(true)
             });
-            console.log(response.headers)
-            // Extract filename from content-disposition header
-            const contentDisposition = response.headers["content-disposition"];
-            const fileNameMatch = contentDisposition.match(/filename="(.+)"/);
-            const fileName = fileNameMatch ? fileNameMatch[1] : "downloadedFile";
-
-            // Create a temporary anchor element to trigger the download
-            const url = window.URL.createObjectURL(new Blob([response.data]));
-            const link = document.createElement("a");
-            link.href = url;
-            // Setting filename received in response
-            link.setAttribute("download", fileName);
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-
-            setDownloadStatus("Downloaded");
-        } catch (error) {
-            console.error("Error downloading file:", error);
-            setDownloadStatus("Error downloading");
-        }
+        }).catch(error => console.error(error));
     };
     return (
         <section className="container py-10">
-            <h1 className="section-header text-center">Soon</h1>
+            <h1 className="section-header text-center">Details about me</h1>
             <h4 className="prose-xl text-center mb-2">In progress</h4>
-            <div className="grid md:grid-cols-2 gap-5 items-center">
-                <button style={{ fontSize: "25px" }}
-                    onClick={downloadResume}>
-                    Download Resume
-                </button>
-                <p>{downloadStatus}</p>
+            <div className="grid md:grid-cols-3 gap-5 items-center">
+                <div>
+                    <Button
+                        extraStyle={"w-full"}
+                        onClick={onButtonClick}>
+                        Fast download Resume
+                    </Button>
+                    {status && <p className="prose-xl text-center mb-2">Congratulations, please check your downloads folder!</p>}
+                </div>
             </div>
         </section>
     )
