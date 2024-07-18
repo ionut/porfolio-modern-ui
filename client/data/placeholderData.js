@@ -87,3 +87,20 @@ export const workExperience = [
     thumbnail: "/knowledge.svg",
   },
 ];
+
+export const portfolios = [
+  {
+    title: "",
+    description: "",
+    technologies: [
+      {
+        image: "",
+      },
+    ],
+    url: "",
+    imageUrl: "",
+  },
+];
+
+// const { title, description, technologies, url } = item.attributes;
+// const { url: imageUrl } = item.attributes.image.data.attributes

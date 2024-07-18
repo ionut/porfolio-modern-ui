@@ -24,7 +24,8 @@ const Navbar = () => {
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link href="/" className="prose md:prose-md link-animation">Home</Link></li>
-                        <li><Link href="/blogs" className="prose md:prose-md link-animation">Blogs</Link></li>
+                        <li><Link href="/contact" className="prose md:prose-md link-animation">Contact</Link></li>
+                        <li><Link href="/details" className="prose md:prose-md link-animation">Details</Link></li>
                     </ul>
                 </div>
                 <Link href="/"><Image src="/logo.svg" width={50} height={50} alt="ALT" /></Link>
@@ -32,7 +33,8 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="flex gap-6 p-4 relative menu-horizontal px-1">
                     <li><Link href="/" className={`lg:prose-xl link-animation px-6 ${pathname === '/' ? 'link-animation-active' : ''}`}>Home</Link></li>
-                    <li><Link href="/blogs" className={`lg:prose-xl link-animation px-6 ${pathname === '/blogs' ? 'link-animation-active' : ''}`}>Blogs</Link></li>
+                    <li><Link href="/contact" className={`lg:prose-xl link-animation px-6 ${pathname === '/contact' ? 'link-animation-active' : ''}`}>Contact</Link></li>
+                    <li><Link href="/details" className={`lg:prose-xl link-animation px-6 ${pathname === '/details' ? 'link-animation-active' : ''}`}>Details</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">
