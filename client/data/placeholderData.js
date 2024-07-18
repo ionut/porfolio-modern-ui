@@ -2,62 +2,62 @@ export const skills = [
   {
     id: 1,
     title: "HTML",
-    icon: "/html-5.svg",
+    icon: "/technologies/html-5.svg",
   },
   {
     id: 2,
     title: "CSS",
-    icon: "/css-3.svg",
+    icon: "/technologies/css-3.svg",
   },
   {
     id: 3,
     title: "Tailwind",
-    icon: "/tailwind.svg",
+    icon: "/technologies/tailwind.svg",
   },
   {
     id: 4,
     title: "Bootstrap",
-    icon: "/bootstrap.svg",
+    icon: "/technologies/bootstrap.svg",
   },
   {
     id: 5,
     title: "SASS",
-    icon: "/sass.svg",
+    icon: "/technologies/sass.svg",
   },
   {
     id: 6,
     title: "React library",
-    icon: "/react.svg",
+    icon: "/technologies/react.svg",
   },
   {
     id: 7,
     title: "Next JS",
-    icon: "/next.svg",
+    icon: "/technologies/next.svg",
   },
   {
     id: 8,
     title: "Node JS",
-    icon: "/node-js.svg",
+    icon: "/technologies/node-js.svg",
   },
   {
     id: 9,
     title: "Wordpress",
-    icon: "/wordpress.svg",
+    icon: "/technologies/wordpress.svg",
   },
   {
     id: 10,
     title: "Host/Webservers",
-    icon: "/servers.svg",
+    icon: "/technologies/servers.svg",
   },
   {
     id: 11,
     title: "REST API",
-    icon: "/api.svg",
+    icon: "/technologies/api.svg",
   },
   {
     id: 12,
     title: "Typescript",
-    icon: "/typescript.svg",
+    icon: "/technologies/typescript.svg",
   },
 ];
 
@@ -90,15 +90,218 @@ export const workExperience = [
 
 export const portfolios = [
   {
-    title: "",
-    description: "",
+    title: "Fromaj",
+    description:
+      "Jquery Library, Vanilla PHP and CSS with connection to SQL Database",
     technologies: [
       {
-        image: "",
+        image: ["/technologies/php.svg"],
+      },
+      {
+        image: ["/technologies/jquery.svg"],
+      },
+      {
+        image: ["/technologies/css-3.svg"],
+      },
+      {
+        image: ["/technologies/mysql.svg"],
       },
     ],
-    url: "",
-    imageUrl: "",
+    url: "https://fromaj.ro",
+    imageUrl: "/proiecte/fromaj.png",
+  },
+  {
+    title: "Supremenutra",
+    description:
+      "JavaScript Animations Library and Tailwind CSS using ZeplinDesign",
+    technologies: [
+      {
+        image: ["/technologies/javascript.svg"],
+      },
+      {
+        image: ["/technologies/tailwind.svg"],
+      },
+      {
+        image: ["/technologies/ftp.svg"],
+      },
+    ],
+    url: "https://supremenutra.com",
+    imageUrl: "/proiecte/nutra.svg",
+  },
+  {
+    title: "Amashen",
+    description:
+      "JavaScript Animations Library and Tailwind CSS using ZeplinDesign",
+    technologies: [
+      {
+        image: ["/technologies/javascript.svg"],
+      },
+      {
+        image: ["/technologies/tailwind.svg"],
+      },
+      {
+        image: ["/technologies/ftp.svg"],
+      },
+    ],
+    url: "https://amashen.com",
+    imageUrl: "/proiecte/amashen.svg",
+  },
+  {
+    title: "Optiloss",
+    description: "React Libraries, Tailwind CSS and API Integrations",
+    technologies: [
+      {
+        image: ["/technologies/react.svg"],
+      },
+      {
+        image: ["/technologies/api.svg"],
+      },
+      {
+        image: ["/technologies/tailwind.svg"],
+      },
+      {
+        image: ["/technologies/nginx.svg"],
+      },
+    ],
+    url: "https://optiloss.com",
+    imageUrl: "/proiecte/optiloss.webp",
+  },
+  {
+    title: "Herpigo",
+    description: "React Libraries, Tailwind CSS and API Integrations",
+    technologies: [
+      {
+        image: ["/technologies/react.svg"],
+      },
+      {
+        image: ["/technologies/api.svg"],
+      },
+      {
+        image: ["/technologies/tailwind.svg"],
+      },
+      {
+        image: ["/technologies/nginx.svg"],
+      },
+    ],
+    url: "https://herpigo.com",
+    imageUrl: "/proiecte/herpigo.webp",
+  },
+  {
+    title: "Finistress",
+    description: "React Libraries, Tailwind CSS and API Integrations",
+    technologies: [
+      {
+        image: ["/technologies/react.svg"],
+      },
+      {
+        image: ["/technologies/api.svg"],
+      },
+      {
+        image: ["/technologies/tailwind.svg"],
+      },
+      {
+        image: ["/technologies/nginx.svg"],
+      },
+    ],
+    url: "https://finistress.com",
+    imageUrl: "/proiecte/finistress.webp",
+  },
+  {
+    title: "Clinical Beauty",
+    description: "React Libraries, Tailwind CSS and API Integrations",
+    technologies: [
+      {
+        image: ["/technologies/react.svg"],
+      },
+      {
+        image: ["/technologies/api.svg"],
+      },
+      {
+        image: ["/technologies/tailwind.svg"],
+      },
+      {
+        image: ["/technologies/nginx.svg"],
+      },
+    ],
+    url: "https://clinicalbeauty.net",
+    imageUrl: "/proiecte/cb.svg",
+  },
+  {
+    title: "Alpha Creams",
+    description: "React Libraries, Tailwind CSS and API Integrations",
+    technologies: [
+      {
+        image: ["/technologies/react.svg"],
+      },
+      {
+        image: ["/technologies/api.svg"],
+      },
+      {
+        image: ["/technologies/tailwind.svg"],
+      },
+      {
+        image: ["/technologies/nginx.svg"],
+      },
+    ],
+    url: "https://alphacreams.com/",
+    imageUrl: "/proiecte/alpha.webp",
+  },
+  {
+    title: "Thunder of Zeus",
+    description: "React Libraries, Tailwind CSS and API Integrations",
+    technologies: [
+      {
+        image: ["/technologies/react.svg"],
+      },
+      {
+        image: ["/technologies/api.svg"],
+      },
+      {
+        image: ["/technologies/tailwind.svg"],
+      },
+      {
+        image: ["/technologies/nginx.svg"],
+      },
+    ],
+    url: "https://thunderofzeus.com",
+    imageUrl: "/proiecte/toz.webp",
+  },
+  {
+    title: "Radical Entourage",
+    description: "Wordpress, Elementor and management site",
+    technologies: [
+      {
+        image: ["/technologies/wordpress.svg"],
+      },
+      {
+        image: ["/technologies/css-3.svg"],
+      },
+      {
+        image: ["/technologies/mysql.svg"],
+      },
+    ],
+    url: "https://radical-entourage.ro",
+    imageUrl: "/proiecte/radical.webp",
+  },
+  {
+    title: "My portfolio",
+    description: "NextJS, Strapi CMS, GitHub API, Tailwind CSS/Libraries",
+    technologies: [
+      {
+        image: ["/technologies/next.svg"],
+      },
+      {
+        image: ["/technologies/api.svg"],
+      },
+      {
+        image: ["/technologies/tailwind.svg"],
+      },
+      {
+        image: ["/technologies/nginx.svg"],
+      },
+    ],
+    url: "https://husoschi-ionut-portfolio.vercel.app/",
+    imageUrl: "/logo.svg",
   },
 ];
 
