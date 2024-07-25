@@ -2,6 +2,8 @@ import React from 'react'
 import { format } from "date-fns";
 import { fetchGitHubRepos } from '@/data/getGithubProfileDetails';
 
+export const revalidate = 3600
+
 const GitHubActivityTable = async () => {
     const res = await fetchGitHubRepos();
 
