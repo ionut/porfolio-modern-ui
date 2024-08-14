@@ -25,7 +25,7 @@ const PortfolioSection = () => {
                 const data = await fetchPortfolios()
                 setPortfoliosList(data)
             } catch {
-                throw new Error("Could not fetch weather data.")
+                throw new Error("Could not fetch data.")
             }
         }
         search();

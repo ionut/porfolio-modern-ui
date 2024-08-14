@@ -1,9 +1,20 @@
-import React from 'react'
-import { format } from "date-fns";
-import { fetchGitHubRepos } from '@/data/getGithubProfileDetails';
 
-const GitHubActivityTable = async () => {
-    const res = await fetchGitHubRepos();
+"use client"
+import React, { useEffect, useState } from 'react'
+import { format } from "date-fns";
+
+const GitHubActivityTable = () => {
+    const [gitData, setGitData] = useState([])
+
+    useEffect(() => {
+        async function startFetching() {
+            const res = await fetch("/api/git");
+            const data = await res.json()
+            setGitData(data)
+        }
+        startFetching()
+    }, [])
+
 
     return (
         <div>
@@ -22,11 +33,11 @@ const GitHubActivityTable = async () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {!Array.isArray(res)
+                        {!Array.isArray(gitData)
                             ?
-                            <p className="prose-xl">{res}</p>
+                            <p className="prose-xl">{gitData}</p>
                             :
-                            res.map((item, index) => {
+                            gitData.map((item, index) => {
                                 const { id, name, html_url, homepage, updated_at, language } = item;
                                 const formatedUpdatedDate = format(new Date(updated_at), "MM/dd/yyyy");
 

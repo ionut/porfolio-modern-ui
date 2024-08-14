@@ -1,5 +1,5 @@
 
-import React, { Suspense } from 'react'
+import React from 'react'
 import { MovingButton } from '../ui/MovingBorders'
 import { workExperience } from '@/data/placeholderData'
 import Image from 'next/image'
