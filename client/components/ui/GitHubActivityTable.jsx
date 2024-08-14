@@ -15,7 +15,6 @@ const GitHubActivityTable = () => {
         startFetching()
     }, [])
 
-
     return (
         <div>
             <h1 className="text-center prose-2xl mb-2">My GitHub Activity</h1>
