@@ -7,8 +7,6 @@ const PortfolioList = ({ portfoliosList }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {portfoliosList.map((item, index) => {
                 const { title, description, technologies, url, imageUrl: projectImage } = item;
-                // const { url: imageUrl } = item.attributes.image.data.attributes
-
                 return (
                     <Pin3d key={index}
                         title={`${title}`}
@@ -24,7 +22,7 @@ const PortfolioList = ({ portfoliosList }) => {
                                 </span>
                             </div>
                             <div className="flex flex-1 w-full rounded-lg mt-4">
-                                <Image src={`${projectImage}`} width={288} height={192} alt={`${title}`} className="object-contain h-[110px]" />
+                                <Image src={`${projectImage}`} width={288} height={192} alt={`${title}`} className="object-contain max-h-[110px]" />
                             </div>
                             <div className="flex items-center justify-between mt-7 mb-3">
                                 <div className="flex items-center">
@@ -47,7 +45,7 @@ const PortfolioList = ({ portfoliosList }) => {
                                 <a href={`${url}`} target='_blank' className="flex justify-end items-center gap-2">
                                     <p className="text-lg  text-primary">Check Live Site</p>
 
-                                    <Image src="/arrow.svg" width={15} height={15} alt="Arrow" />
+                                    <Image src="/images/arrow.svg" width={15} height={15} alt="Arrow" className="object-contain" />
 
                                 </a>
                             </div>

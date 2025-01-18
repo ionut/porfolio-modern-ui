@@ -31,14 +31,14 @@ export const AnimatedTooltip = ({
 
     return (
         <>
-            {items.map((item) => (
+            {items.map((item, index) => (
                 <div
                     className="-mr-4  relative group cursor-pointer"
-                    key={item.id}
-                    onMouseEnter={() => setHoveredIndex(item.id)}
+                    key={index}
+                    onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 >
-                    {hoveredIndex === item.id && (
+                    {hoveredIndex === index && (
                         <motion.div
                             initial={{ opacity: 0, y: 20, scale: 0.6 }}
                             animate={{

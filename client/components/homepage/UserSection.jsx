@@ -28,7 +28,7 @@ const UserSection = () => {
                         <div className="p-4">
                             <div className="avatar">
                                 <div className="rounded">
-                                    <Image src="/webdev.svg" alt="me" width={400} height={475} className="" />
+                                    <Image src="/images/webdev.svg" alt="me" width={400} height={475} className="" />
                                 </div>
                             </div>
                             <h4 className="prose md:prose-md">Web development encompasses a wide range of services, which include delivering websites or web apps, eCommerce solutions, website architectures, QA testing, maintenance, consulting, and even CMS integrations.</h4>
